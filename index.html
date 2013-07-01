@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="FundooDirectiveTutorial">
+<head>
+  <title>Rating Directive Demo</title>
+  <link rel="stylesheet" href="rating.css"/>
+</head>
+<body ng-controller="FundooCtrl">
+  Rating is {{rating}} <br/>
+  <div fundoo-rating rating-value="rating" max="10" readonly="true"></div>
+  
+  <div fundoo-rating rating-value="rating" max="10" readonly="false" on-rating-selected="saveRatingToServer(newRating)"></div>
+  
+  <button ng-click="rating = 4">Change rating to 4</button>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+  <script type="text/javascript" src="rating.js"></script>
+</body>
+</html>
+
+
